@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MusicService {
+    //의존성 주입 (DI)
     public String recommendPlaylist(String genre){
         String Playlist = switch (genre){
             case "hiphop" -> "2025년 최고의 힙합";
