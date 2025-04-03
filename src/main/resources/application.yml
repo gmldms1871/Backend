@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: demo
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hanyang1
+    username: to_on_admin
+    password: BgCt9kuMws9jOivFj05UcEYpauecNa076H0oontnNrUGgG13lr
