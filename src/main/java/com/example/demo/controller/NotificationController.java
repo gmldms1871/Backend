@@ -1,7 +1,7 @@
-package common.controller;
+package com.example.demo.controller;
 
-import common.domain.Notification;
-import common.service.NotificationService;
+import com.example.demo.domain.Notification;
+import com.example.demo.service.NotificationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

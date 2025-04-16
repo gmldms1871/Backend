@@ -1,7 +1,7 @@
-package common.service;
+package com.example.demo.service;
 
-import common.domain.Notification;
-import common.repository.NotificationRepository;
+import com.example.demo.domain.Notification;
+import com.example.demo.repository.NotificationRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

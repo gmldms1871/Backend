@@ -1,7 +1,7 @@
-package common.controller;
+package com.example.demo.controller;
 
-import common.domain.Company;
-import common.service.CompanyService;
+import com.example.demo.domain.Company;
+import com.example.demo.service.CompanyService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

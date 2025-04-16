@@ -1,7 +1,7 @@
-package common.service;
+package com.example.demo.service;
 
-import common.domain.Company;
-import common.repository.CompanyRepository;
+import com.example.demo.domain.Company;
+import com.example.demo.repository.CompanyRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
