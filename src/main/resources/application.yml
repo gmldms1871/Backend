@@ -4,8 +4,7 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://to-on.kr:3306/hanyang1
-    #   url우리꺼로 수정하래요.
+    url: jdbc:mysql://to-on.kr:3306/hanyang1 #이거 한번 확인 받기. url우리꺼로 수정하래요.
     username: to_on_admin
     password: BgCt9kuMws9jOivFj05UcEYpauecNa076H0oontnNrUGgG13lr
 
@@ -25,4 +24,4 @@ mybatis:
   mapper-locations: mapper/*.xml
 
 server:
-  port: 3301
+  port: 4601
