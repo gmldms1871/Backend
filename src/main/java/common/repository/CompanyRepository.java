@@ -11,4 +11,3 @@ public interface CompanyRepository extends JpaRepository<Company, String> {
     Optional<Company> findByEmailAndPassword(String email, String password);
     List<Company> findAllByOrderByLikesDesc();
 }
-

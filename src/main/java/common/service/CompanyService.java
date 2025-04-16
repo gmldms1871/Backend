@@ -21,6 +21,10 @@ public class CompanyService {
         System.out.println("password: " + password);
         System.out.println("companyName: " + companyName);
 
+        if (email == null || password == null || userName == null || companyName == null) {
+            throw new IllegalArgumentException("필수 항목이 누락되었습니다.(필수 항목 : email, password, userName, companyName)");
+        }
+
         if (companyRepository.findByEmail(email).isPresent()) {
             throw new RuntimeException("이미 존재하는 이메일입니다.");
         }
@@ -49,7 +53,13 @@ public class CompanyService {
 
         if (request.containsKey("userName")) company.setUserName(request.get("userName"));
         if (request.containsKey("userPhone")) company.setUserPhone(request.get("userPhone"));
+        if (request.containsKey("companyName")) company.setCompanyName(request.get("companyName"));
         if (request.containsKey("interestTopic")) company.setInterestTopic(request.get("interestTopic"));
+        if (request.containsKey("businessNumber")) company.setBusinessNumber(request.get("businessNumber"));
+        if (request.containsKey("businessLicense")) company.setBusinessLicense(request.get("businessLicense"));
+        if (request.containsKey("homepageUrl")) company.setHomepageUrl(request.get("homepageUrl"));
+        if (request.containsKey("category")) company.setCategory(request.get("category"));
+
 
         return companyRepository.save(company);
     }

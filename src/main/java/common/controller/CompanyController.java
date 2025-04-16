@@ -27,13 +27,14 @@ public class CompanyController {
             String email = request.get("email");
             String password = request.get("password");
             String userName = request.get("userName");
-            String name = request.get("name");
+            String companyName = request.get("companyName"); // ← 대소문자 확인
 
-            Company company = companyService.register(email, password, name, userName);
+            Company company = companyService.register(email, password, companyName, userName);
             return ResponseEntity.ok(company);
-
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
         } catch (Exception e) {
-            e.printStackTrace(); // 로깅 용
+            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("회원가입 실패: " + e.getMessage());
         }
@@ -104,4 +105,5 @@ public class CompanyController {
         Company updated = companyService.updateInfo(email, request);
         return ResponseEntity.ok(updated);
     }
+
 }
